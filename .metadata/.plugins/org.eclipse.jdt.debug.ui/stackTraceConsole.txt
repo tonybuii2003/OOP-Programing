@@ -1,0 +1,3 @@
+if (hex.charAt(i) == 'A') {
+    			result += 10*(int)(Math.pow(16, pow));
+    		}

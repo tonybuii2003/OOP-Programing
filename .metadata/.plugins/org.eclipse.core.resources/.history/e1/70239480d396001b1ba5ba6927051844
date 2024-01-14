@@ -1,0 +1,57 @@
+public class Club {
+public void sort(int[] arr) {
+	for (int i = 0; i<arr.length-1; i++) {
+		int min  = i;
+		for (int j = i+1; j<arr.length; j++) 
+			if (arr[j] < arr[min]) 
+				min = j;
+		
+		int temp = arr[min];
+		arr[min] = arr[i];
+		arr[i] = temp;
+	}
+}
+public boolean check (int[] arr, int i) {
+	if(arr[i] == arr[i+1]) {
+		return true;
+	}
+	return false;
+}
+public int countClub(int[] arr) {
+	int count = 0;
+	int result = 0;
+	int[] temp = new int[arr.length];
+	for (int i = 0; i<arr.length; i++) {
+		count = 1;
+		temp[i] = 0;
+		for (int j = i+1; j<arr.length;j++)
+		{
+			
+			if (arr[j] == arr[i])
+			{
+				temp[j] = 1;
+				count ++;
+			}
+			if (temp[i] != 1)
+			{
+				temp[i] = count;
+			}
+		}
+	}
+	for (int i = 0; i<arr.length; i++) {
+		if (temp[i] >=2) {
+			result++;
+		}
+	}
+	return result;
+}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = {1,2,2,2,2,3,4,4};
+		Club club = new Club();
+		 System.out.println(club.countClub(arr) + " clumps");
+		
+		}
+	}
+

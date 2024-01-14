@@ -1,0 +1,42 @@
+public class NumberSystems {
+
+//    public static int baseX2decimal(int base, String s) {
+//    	
+//    }
+    
+//    public static String decimal2BaseX(int base, int dec){
+//    	
+//    }
+//
+//    public static int hexadecimal2decimal(String hex){ 
+//    	
+//    }
+//
+//    public static String decimal2binary(int n){ …}
+//
+//    public static String decimal2hex(int n){ …}
+//
+    public static int binary2decimal(String b){ 
+    	int result = 0;
+    	for (int i = 0; i< b.length(); i++) {
+    		if (b.charAt(i) == '1') {
+    			System.out.print(i + " ");
+    			result += Math.pow(2, i);
+    		}
+    	}
+    	return result;
+    }
+
+    public static void main(String[] args) {
+//
+//         System.out.println(hexadecimal2decimal("A1")); // 161
+//
+//         System.out.println(decimal2binary(10)); // 1010
+//
+//         System.out.println(decimal2hex(161)); // A1
+
+         System.out.println(binary2decimal("1010")); // 10
+
+    }
+
+}

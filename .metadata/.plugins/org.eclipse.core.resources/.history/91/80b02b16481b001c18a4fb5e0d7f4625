@@ -1,0 +1,54 @@
+public class NumberSystems {
+	public static String reverse(String s) {
+    	String temp = "";
+    	for (int i = s.length()-1; i>=0; i--) {
+    		temp += s.substring(i,i+1);
+    	}
+    	return temp;
+	}
+    public static int baseX2decimal(int base, String s) {
+    	String temp = reverse(s);
+    	int result = 0;
+    	int s1 = Integer.parseInt(temp);
+    	for (int i = 0; i<temp.length(); i++) {
+    		System.out.println(s1%((int)(Math.pow(10, 0))));
+    	}
+    	return result;
+    }
+    
+//    public static String decimal2BaseX(int base, int dec){
+//    	
+//    }
+//
+//    public static int hexadecimal2decimal(String hex){ 
+//    	
+//    }
+//
+//    public static String decimal2binary(int n){ …}
+//
+//    public static String decimal2hex(int n){ …}
+//
+    public static int binary2decimal(String b){ 
+    	String temp = reverse(b);
+    	int result = 0;
+    	for (int i = 0; i< temp.length(); i++) {
+    		if (temp.charAt(i) == '1') {
+    			result += Math.pow(2, i);
+    		}
+    	}
+    	return result;
+    }
+
+    public static void main(String[] args) {
+//
+//         System.out.println(hexadecimal2decimal("A1")); // 161
+//
+//         System.out.println(decimal2binary(10)); // 1010
+//
+//         System.out.println(decimal2hex(161)); // A1
+
+         System.out.println(baseX2decimal(3,"21")); // 10
+
+    }
+
+}
